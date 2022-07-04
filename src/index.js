@@ -1,4 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(<h1>Hellow World !</h1>, document.getElementById('root'));
+
+const date= Date();
+const currentDate = new Date.getFullYear();
+
+
+
+
+ReactDOM.render(
+<div>
+
+<h1>{date}{}</h1>
+
+  </div>
+
+
+
+
+
+
+  ,document.getElementById("root")
+)
