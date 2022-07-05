@@ -1,27 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './style.css';
 
-const date = Date();
+const date = Date(),
+ var value;
 var currentTime = new Date().getHours();
-var morningValue, eveningValue, nightValue;
 
-function greetings(time) {
-  if (time === 0 && time < 12) {
-    morningValue = 'Good Morning';
+
+function greetings(x) {
+
+  if (x===0 || x<=12){
+
+  
+  <h1 style={{color : white}}> {value="Good Morning !"}</h1>
   }
-  elseif(time >= 12 && time <= 18);
-  {
-    eveningValue = 'Good Evening';
-  }
-  else{
-    nightValue = 'Good night';
-  }
+else if (x>12 && x<=18) {
+
+<h1 style="color : red;">{value="Good Evening !"}</h1>
+
+}
+ else {
+
+  <h1>{value="Good Night !"}</h1>
+ }
+
+return value;
+
 }
 
-ReactDOM.render(
-  <div>
-    <h1>{console.log(greetings(currentTime))}</h1>
-  </div>,
+const Header = () => {
+  return (
+  
+      <div>
+    <h1>{greetings(currentTime)}</h1>
+  </div>
+    
+  );
+}
 
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Header />);
+
+
