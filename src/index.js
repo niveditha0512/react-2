@@ -5,14 +5,17 @@ import './style.css';
 const date = Date(),
  var value;
 var currentTime = new Date().getHours();
-
+const styling={
+  color:""
+}
 
 function greetings(x) {
 
   if (x===0 || x<=12){
 
   
-  <h1 style={{color : white}}> {value="Good Morning !"}</h1>
+  <h1> {value="Good Morning !", styling.color='red'
+  }</h1>
   }
 else if (x>12 && x<=18) {
 
@@ -32,7 +35,7 @@ const Header = () => {
   return (
   
       <div>
-    <h1>{greetings(currentTime)}</h1>
+    <h1>{greetings(3)}</h1>
   </div>
     
   );
