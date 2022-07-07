@@ -2,45 +2,37 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style.css';
 
+var value;
 
-const date = Date(),
- var value;
 var currentTime = new Date().getHours();
 
+var displayColor = {
+  color: '',
+};
 
 function greetings(x) {
-
-  if (x===0 || x<=12){
-
-  
-  <h1> {value="Good Morning !"
-  }</h1>
+  if (x === 0 || x <= 12) {
+    value = 'Good Morning !';
+    displayColor.color = 'red';
+  } else if (x > 12 && x <= 18) {
+    value = 'Good Evening !';
+    displayColor.color = 'blue';
+  } else {
+    value = 'Good Night !';
+    displayColor.color = 'green';
+    //color = 'red';
   }
-else if (x>12 && x<=18) {
 
-<h1>{value="Good Evening !"}</h1>
-
-}
- else {
-
-  <h1>{value="Good Night !"}</h1>
- }
-
-return value;
-
+  return value;
 }
 
 const Header = () => {
   return (
-  
-      <div>
-    <h1>{greetings(currentTime)}</h1>
-  </div>
-    
+    <div>
+      <h1 style={displayColor.color}>{greetings(currentTime)}</h1>
+    </div>
   );
-}
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Header />);
-
-
