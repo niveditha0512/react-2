@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './style.css';
 
 
@@ -31,7 +31,7 @@ else if (x>12 && x<=18) {
 return value;
 
 }
-
+/*
 const Header = () => {
   return (
   
@@ -43,6 +43,12 @@ const Header = () => {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Header />);
+root.render(<Header />);*/
+
+ReactDOM.render(<div>
+  <h1>{greetings(3)}</h1>
+</div>,document.getElementById("root")
+  
+)
 
 
